@@ -1,0 +1,9 @@
+# Ejercicio 1 — Cambiar la imagen de predicción en YOLO
+
+Tras la ejecución del modelo YOLO, se obtuvo para la foto **Zidane** las siguientes salidas: 2 personas con confianza de 0.84 y 0.82 y corbata con confianza de 0.29, al revisar la imagen se confirma que, en efecto, se encuadran dos personas y una de ellas porta una corbata. 
+
+Para la imagen **_bus_** (autobús), con el modelo entrenado por COCO, se identifican: 4 personas (con confianza de 0.85, 0.82, 0.77 y 0.27), 1 autobús (confianza de 0.89) y una parada de alto (_stop sign_ con confianza de 0.41), La detección es bastante precisa, ya que a simple vista la parada de alto está en una esquina y puede ser incluso inperceptible para el ojo humano.
+
+Posteriormente se subió al notebook una foto propia, en la cual se tiene una **laptop** y una **taza**, al fondo se aprecian unas mancuernas. Al ejecutar el modelo desde el CLI, se identifica la laptop con confianza de 0.91 y la taza con confianza de 0.94. Al ejecutar el modelo entrenado por COCO, se identifican también la laptop y la taza, ambas con 0.97 de confianza, pero adicionalmente el modelo identifica el teclado de la laptop, con una confianza del 0.29. Es decir, los dos modelos son buenos para identificar los objetos principales encuadrados en la imagen, pero el entrenado por COCO va más allá e identificó un objeto adicional. En ninguno de los dos casos se identificó la mancuerna, pero esto puede ser por la posición de la misma o porque simplemente es un objeto que no se encuentra dentro de las bases de entrenamiento.
+
+La imagen propia ```foto-mia``` así como sus respectivas salidas y las salidas de ```zidane``` y ```bus```, se encuentran en el repositorio. Se incluye también evidencia de la ejecución en Colab.
