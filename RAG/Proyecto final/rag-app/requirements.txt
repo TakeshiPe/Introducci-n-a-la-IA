@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+chromadb
+google-genai
+streamlit
+python-dotenv
+pypdf
+httpx
+sentence-transformers  # embeddings locales (Opción B) - ver app/embed_local.py
